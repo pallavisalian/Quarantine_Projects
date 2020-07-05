@@ -1,0 +1,76 @@
+
+
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+
+</head>
+<body>
+<h1 align="Center" id="s">Comparison</h1>
+<p id="b" align="center"></p>
+<p id="y" align="center"></p>
+<p id="op" align="center"></p>
+<input type="text" id='ans'>
+
+
+<script>
+function getRandomInt(min,max)
+{
+  return Math.floor(Math.random()*(max-min+1))+min;
+}
+	var a = getRandomInt(10,999);
+
+function getRandomInt(min,max)
+{
+  return Math.floor(Math.random()*(max-min+1))+min;
+}
+	var z = getRandomInt(10,999);
+	
+
+
+document.getElementById("b").innerHTML= a + " is _______ than " + z ;
+
+document.getElementById("y").innerHTML="(Give answer in such way : greater,equal,smaller)";
+
+
+
+function myfun(){
+	var x = document.getElementById('ans').value;
+	if (a>z)
+	{
+	            if("greater"==x)
+		{
+		document.getElementById("op").innerHTML="Right Answer!!";
+		}else{
+		document.getElementById("op").innerHTML="Sorry, Wrong Answer";
+		}
+	}
+
+	if (a==z)
+	{
+	            if (x=='equal')
+		{
+		document.getElementById("op").innerHTML="Right Answer!!";
+		}else{
+		document.getElementById("op").innerHTML="Sorry, Wrong Answer";
+		}
+	}
+
+	if (a<z)
+	{
+	            if (x=='smaller')
+		{
+		document.getElementById("op").innerHTML="Right Answer!!";
+		}else{
+		document.getElementById("op").innerHTML="Sorry, Wrong Answer";
+		}
+	}
+	
+
+}
+
+</script>
+<button type="button" onclick="myfun()" align="center">Hit me to check!</button>
+</body>
+</html>	
