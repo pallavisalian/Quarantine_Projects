@@ -1,0 +1,51 @@
+
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+
+</head>
+<body>
+<h1 align="Center" id="s">Addition</h1>
+<p id="b" align="center"></p>
+<p id="y" align="center"></p>
+<p id="op" align="center"></p>
+<input type="text" id='ans1'>
+<input type="text" id='ans2'>
+<script>
+function getRandomInt(min,max)
+{
+  return Math.floor(Math.random()*(max-min+1))+min;
+}
+	var a = getRandomInt(1,50); 
+	var res;
+
+	
+document.getElementById("b").innerHTML="Enter two numbers whose sum is "+a;                     
+	
+	
+<!--document.getElementById("y").innerHTML="(Give answer in such way : thousand,hundred,ten,unit)";-->
+
+
+res=a;
+console.log("Res =>"+res)
+
+
+function myfun(){
+	var x =Number(document.getElementById('ans1').value);
+                  var y =Number(document.getElementById('ans2').value);
+                  
+	if (res==(x+y))
+                  {
+		document.getElementById("op").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op").innerHTML="Sorry, Wrong Answer";
+	}
+}
+</script>
+<button type="button" onclick="myfun()" align="center">Hit me to check!</button>
+</body>
+</html>
