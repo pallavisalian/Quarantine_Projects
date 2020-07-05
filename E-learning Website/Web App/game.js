@@ -15,6 +15,30 @@ getRandomInt=(min,max)=>
 {
   return Math.floor(Math.random()*(max-min+1))+min;
 };
+getRandomfromList=(LisT)=>{
+    var temp = getRandomInt(0,(LisT.length-1));
+    return LisT[temp];
+};
+
+getRange=(min,max)=>{
+    var ary =[];
+    for (let i = min; i <= max; i++) {
+        ary.push(i);
+    };
+    return ary;
+};
+
+shuffle=(array)=>{
+    var currNdx=array.length,temp,ranIndx;
+    while(0!==currNdx){
+        ranIndx=Math.floor(Math.random()*currNdx);
+        currNdx--;
+        temp=array[currNdx];
+        array[currNdx]=array[ranIndx];
+        array[ranIndx]=temp;
+    }
+    return array;
+};
 QueGen=(questions)=>{
 	var a = getRandomInt(100,9999),atemp=a; 
 	var t=atemp.toString().length;
