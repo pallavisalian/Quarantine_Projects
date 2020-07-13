@@ -1,0 +1,15 @@
+.left-col {
+    background-color: aqua;
+    width: 10%;
+    float: left;
+}
+
+.right-col {
+    background-color: aqua;
+    width: 10%;
+    float: right;
+}
+
+.center-col {
+    float: left;
+}
